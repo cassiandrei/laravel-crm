@@ -14,3 +14,22 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+//EMPRESAS
+Route::get('/empresas', function () {
+    return view('empresas');
+});
+
+Route::get('/empresas/add', function () {
+    return view('empresa_add');
+});
+
+Route::post('/empresas/add', function () {
+    return view('empresa_add_post');
+});
+
+Route::get('/empresas/edit/{id}', function () {
+    return view('empresa_edit');
+});
+
+//EMPREGADOS
