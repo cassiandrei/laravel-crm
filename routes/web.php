@@ -17,11 +17,11 @@ Route::get('/', function () {
 
 //EMPRESAS
 Route::get('/empresas', ['as'=>'empresas.index', 'uses'=>'Empresas@index']);
+Route::get('/empresas/add', ['as'=>'empresas.add', 'uses'=>'Empresas@add']);
+Route::post('/empresas/add', ['as'=>'empresas.save', 'uses'=>'Empresas@save']);
+Route::get('/empresas/edit/{id}', ['as'=>'empresas.edit', 'uses'=>'Empresas@edit']);
+Route::put('/empresas/edit/{id}', ['as'=>'empresas.edit', 'uses'=>'Empresas@edit']);
+Route::get('/empresas/delete/{id}', ['as'=>'empresas.deletar', 'uses'=>'Empresas@deletar']);
 
-Route::get('/empresas/add', ['uses'=>'Empresas@add']);
-
-Route::post('/empresas/delete/{id}', ['uses'=>'Empresas@delete']);
-
-Route::put('/empresas/edit/{id}', ['uses'=>'Empresas@edit']);
 
 //EMPREGADOS
