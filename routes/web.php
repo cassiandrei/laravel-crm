@@ -16,7 +16,7 @@ Route::get('/', function () {
 });
 
 //EMPRESAS
-Route::get('/empresas', 'Empresas@index');
+Route::get('/empresas', ['as'=>'empresas.index', 'uses'=>'Empresas@index']);
 
 Route::get('/empresas/add', ['uses'=>'Empresas@add']);
 
