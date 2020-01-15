@@ -16,20 +16,12 @@ Route::get('/', function () {
 });
 
 //EMPRESAS
-Route::get('/empresas', function () {
-    return view('empresas');
-});
+Route::get('/empresas', 'Empresas@index');
 
-Route::get('/empresas/add', function () {
-    return view('empresa_add');
-});
+Route::get('/empresas/add', ['uses'=>'Empresas@add']);
 
-Route::post('/empresas/add', function () {
-    return view('empresa_add_post');
-});
+Route::post('/empresas/delete/{id}', ['uses'=>'Empresas@delete']);
 
-Route::get('/empresas/edit/{id}', function () {
-    return view('empresa_edit');
-});
+Route::put('/empresas/edit/{id}', ['uses'=>'Empresas@edit']);
 
 //EMPREGADOS
