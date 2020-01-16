@@ -47,7 +47,7 @@ class Empresas extends Controller
     public function edit($id)
     {
         $registro = Empresa::find($id);
-        return view('empresas.edit', compact('registro'));
+        return view('admin_crm.empresas.edit', compact('registro'));
     }
 
     public function update(Request $request, $id)
