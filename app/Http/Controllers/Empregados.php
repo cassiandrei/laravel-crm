@@ -10,7 +10,7 @@ class Empregados extends Controller
 {
     public function index(Request $request)
     {
-        $lista = Empregado::paginate(3);
+        $lista = Empregado::paginate(10);
         return view('admin_crm.empregados.index', compact('lista'));
     }
 

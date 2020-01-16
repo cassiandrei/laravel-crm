@@ -9,7 +9,7 @@ class Empresas extends Controller
 {
     public function index(Request $request)
     {
-        $lista = Empresa::paginate(3);
+        $lista = Empresa::paginate(10);
         return view('admin_crm.empresas.index', compact('lista'));
     }
 
